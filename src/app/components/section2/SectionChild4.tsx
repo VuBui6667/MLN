@@ -7,7 +7,6 @@ import ViewModal from "../ViewModal"
 
 const SectionChild4: React.FC = () => {
   // const pathname = usePathname()
-  const isQuiz = false
   const sectionRef = useRef<HTMLElement | null>(null)
   const { ref: triggerRef, inView } = useInView({
     threshold: 0.5,

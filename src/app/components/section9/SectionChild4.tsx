@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { useInView } from "react-intersection-observer"
 import cn from "@/utils"
 // import { usePathname } from "next/navigation"
-import ViewModal from "../ViewModal"
 
 const SectionChild4: React.FC = () => {
   // const pathname = usePathname()
@@ -13,7 +12,6 @@ const SectionChild4: React.FC = () => {
     threshold: 0.5,
     triggerOnce: true,
   })
-  const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
     if (!sectionRef.current || !inView) return

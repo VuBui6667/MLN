@@ -1,5 +1,4 @@
 import React from 'react'
-import SectionChild2 from './SectionChild2'
 import SectionChild1 from './SectionChild1'
 import SectionChild3 from './SectionChild3'
 

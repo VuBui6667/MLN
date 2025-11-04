@@ -1,13 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const Section1: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null)
   const headingRef = useRef<HTMLDivElement | null>(null)
-  const hiddenRef = useRef<HTMLDivElement | null>(null)
-  const [headingHeight, setHeadingHeight] = useState(0);
-  const [chapterHeights, setChapterHeights] = useState<number>(0);
   const chapterRefs = [
     useRef<HTMLDivElement | null>(null),
     useRef<HTMLDivElement | null>(null),

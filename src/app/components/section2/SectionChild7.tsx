@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react"
 import gsap from "gsap"
-import StickyNote from "./StickyNote"
 import { useInView } from "react-intersection-observer"
 import cn from "@/utils"
 import StickyNote2 from "./StickyNote2"

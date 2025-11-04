@@ -1,15 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { useInView } from 'react-intersection-observer'
-import { usePathname } from 'next/navigation'
-import cn from '@/utils'
-import ViewModal from '../ViewModal'
-import { onSubmitQuiz } from '@/lib/utils'
-import { toast } from 'react-toastify'
 
 const SectionChild2: React.FC = () => {
-  const pathname = usePathname()
-  const isQuiz = pathname === '/quiz'
 
   const containerRef = useRef<HTMLDivElement | null>(null)
   const h1Ref = useRef<HTMLHeadingElement | null>(null)
@@ -17,8 +10,6 @@ const SectionChild2: React.FC = () => {
   const imagesRef = useRef<Array<HTMLElement | null>>([])
   const h2Ref = useRef<HTMLHeadingElement | null>(null)
   const accentRef = useRef<SVGSVGElement | null>(null)
-
-  const [isOpen, setIsOpen] = useState(false)
 
   const { ref: inViewRef, inView } = useInView({
     threshold: 0.1,
@@ -110,46 +101,6 @@ const SectionChild2: React.FC = () => {
   const seeds = [
     { src: '/images/section2.2.webp', alt: 'historic illustration 1' },
   ]
-
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmitQuiz = async (answerType: string) => {
-    if (isLoading) return;
-    setIsLoading(true);
-
-    const toastId = toast.loading("Đang gửi câu trả lời...");
-
-    try {
-      const username = localStorage.getItem("username") || "Guest";
-      const isScored = answerType === "C";
-      const data = await onSubmitQuiz({
-        username,
-        quizId: 1,
-        isScored,
-      });
-
-      // close the loading toast before showing the result toast
-      toast.dismiss(toastId);
-
-      if (data.error) {
-        toast.error(`Có lỗi xảy ra: ${data.error}`);
-      } else {
-        if (isScored) {
-          toast.success("Chúc mừng! Bạn đã trả lời đúng câu hỏi.");
-        } else {
-          toast.warning("Rất tiếc! Câu trả lời của bạn chưa chính xác.");
-        }
-      }
-
-      setIsOpen(false);
-    } catch (err) {
-      toast.dismiss(toastId);
-      toast.error("Đã xảy ra lỗi. Vui lòng thử lại.");
-      console.error(err);
-    } finally {
-      setIsLoading(false);
-    }
-  }
 
   return (
     <div className="min-w-[90vw] w-full bg-[#f1eada] h-full">

@@ -1,21 +1,13 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import SwapNote from "../SwapNote";
-import { usePathname } from "next/navigation";
-import ViewModal from "../ViewModal";
-import { onSubmitQuiz } from "@/lib/utils";
-import { toast } from "react-toastify";
 
 const SectionChild2: React.FC = () => {
-  const pathname = usePathname()
-  const isQuiz = pathname === '/quiz'
   const sectionRef = useRef<HTMLElement | null>(null);
   const bgRef = useRef<HTMLDivElement | null>(null);
   const yearRef = useRef<HTMLDivElement | null>(null);
   const titleRef = useRef<HTMLHeadingElement | null>(null);
   const scribbleRef = useRef<SVGPathElement | null>(null);
-
-  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     let ticking = false;
@@ -73,46 +65,6 @@ const SectionChild2: React.FC = () => {
       gsap.killTweensOf([bgRef.current, titleRef.current, yearRef.current, scribbleRef.current]);
     };
   }, []);
-
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmitQuiz = async (answerType: string) => {
-    if (isLoading) return;
-    setIsLoading(true);
-
-    const toastId = toast.loading("Đang gửi câu trả lời...");
-
-    try {
-      const username = localStorage.getItem("username") || "Guest";
-      const isScored = answerType === "C";
-      const data = await onSubmitQuiz({
-        username,
-        quizId: 4,
-        isScored,
-      });
-
-      // close the loading toast before showing the result toast
-      toast.dismiss(toastId);
-
-      if (data.error) {
-        toast.error(`Có lỗi xảy ra: ${data.error}`);
-      } else {
-        if (isScored) {
-          toast.success("Chúc mừng! Bạn đã trả lời đúng câu hỏi.");
-        } else {
-          toast.warning("Rất tiếc! Câu trả lời của bạn chưa chính xác.");
-        }
-      }
-
-      setIsOpen(false);
-    } catch (err) {
-      toast.dismiss(toastId);
-      toast.error("Đã xảy ra lỗi. Vui lòng thử lại.");
-      console.error(err);
-    } finally {
-      setIsLoading(false);
-    }
-  }
 
   return (
     <section

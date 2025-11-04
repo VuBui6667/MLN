@@ -1,24 +1,18 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef } from "react"
 import gsap from "gsap"
 import { useInView } from "react-intersection-observer"
 import cn from "@/utils"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
-import ViewModal from "../ViewModal"
 import MoneyCard3D from "../MoneyCard3D"
-import { onSubmitQuiz } from "@/lib/utils"
-import { toast } from "react-toastify"
 
 const SectionChild3: React.FC = () => {
   const sectionRef = useRef<HTMLElement | null>(null)
-  const leftRef = useRef<HTMLDivElement | null>(null)
 
   const { ref: showRef, inView: inViewToShow } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   })
-
-  const [isOpen, setIsOpen] = useState(false)
 
   const pathname = usePathname()
   const isQuiz = pathname === '/quiz'
@@ -62,46 +56,6 @@ const SectionChild3: React.FC = () => {
 
     return () => ctx.revert()
   }, [inView])
-
-  const [isLoading, setIsLoading] = useState(false);
-
-  const handleSubmitQuiz = async (answerType: string) => {
-    if (isLoading) return;
-    setIsLoading(true);
-
-    const toastId = toast.loading("Đang gửi câu trả lời...");
-
-    try {
-      const username = localStorage.getItem("username") || "Guest";
-      const isScored = answerType === "B";
-      const data = await onSubmitQuiz({
-        username,
-        quizId: 3,
-        isScored,
-      });
-
-      // close the loading toast before showing the result toast
-      toast.dismiss(toastId);
-
-      if (data.error) {
-        toast.error(`Có lỗi xảy ra: ${data.error}`);
-      } else {
-        if (isScored) {
-          toast.success("Chúc mừng! Bạn đã trả lời đúng câu hỏi.");
-        } else {
-          toast.warning("Rất tiếc! Câu trả lời của bạn chưa chính xác.");
-        }
-      }
-
-      setIsOpen(false);
-    } catch (err) {
-      toast.dismiss(toastId);
-      toast.error("Đã xảy ra lỗi. Vui lòng thử lại.");
-      console.error(err);
-    } finally {
-      setIsLoading(false);
-    }
-  }
 
   return (
     <section ref={sectionRef} className="h-screen flex relative">
@@ -163,7 +117,6 @@ const SectionChild3: React.FC = () => {
             style={{
               border: isQuiz ? "4px solid #c64b4b" : "none",
             }}
-            onClick={() => setIsOpen(true)}
           />
         </div>
       </div>

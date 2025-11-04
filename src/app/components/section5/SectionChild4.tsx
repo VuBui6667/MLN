@@ -8,19 +8,12 @@ const SectionChild3: React.FC = () => {
 
   const sectionRef2 = useRef<HTMLDivElement | null>(null)
 
-  const sectionRef3 = useRef<HTMLDivElement | null>(null)
-
   const { ref: triggerRef1, inView: inView1 } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   })
 
   const { ref: triggerRef2, inView: inView2 } = useInView({
-    threshold: 0.1,
-    triggerOnce: true,
-  })
-
-  const { ref: triggerRef3, inView: inView3 } = useInView({
     threshold: 0.1,
     triggerOnce: true,
   })
@@ -94,42 +87,6 @@ const SectionChild3: React.FC = () => {
 
     return () => ctx.revert()
   }, [inView2])
-
-  useEffect(() => {
-    if (!sectionRef3.current || !inView3) return
-
-    const ctx = gsap.context(() => {
-      // Title entrance
-      gsap.from(".js-title", {
-        y: 80,
-        autoAlpha: 0,
-        duration: 1.1,
-        ease: "power3.out",
-        stagger: 0.05,
-      })
-
-      // decorative barbed wire
-      gsap.from(".js-barb", {
-        x: -40,
-        autoAlpha: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        delay: 0.2,
-      })
-
-      // caption lines
-      gsap.from(".js-caption > *", {
-        y: 20,
-        autoAlpha: 0,
-        duration: 0.9,
-        stagger: 0.12,
-        delay: 0.4,
-      })
-    }, sectionRef3)
-
-    return () => ctx.revert()
-  }, [inView3])
-
   return (
     <section className="w-full min-w-[150vw] h-screen flex relative bg-[#0b0b0b]">
       {/* PANEL 1 */}
