@@ -136,34 +136,13 @@ const SectionChild3: React.FC = () => {
   }, [])
 
   return (
-    <section ref={sectionRef} className="w-full min-w-[100vw] h-screen flex relative bg-[#0b0b0b]">
+    <section ref={sectionRef} className="w-full min-w-[200vw] h-screen flex relative bg-[#0b0b0b]">
       {/* LEFT PANEL */}
       <div
         ref={leftRef}
         className={cn("relative z-[20] w-[50%] px-12 py-8 flex flex-col", inView ? "" : "opacity-0")}
-        onMouseMove={handleMouseMove}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
       >
         {/* FOLLOW IMAGE (replace src with your image) */}
-        <img
-          ref={imgRef}
-          src="/images/section3.3.webp" /* <-- replace with your image path */
-          alt="follow"
-          style={{
-            position: "absolute",
-            left: 200,
-            top: -100,
-            width: 320,
-            height: "auto",
-            pointerEvents: "none",
-            transform: "translate(-50%, -50%)",
-            opacity: 0,
-            transition: "opacity 200ms ease",
-            willChange: "transform, opacity",
-            zIndex: 200,
-          }}
-        />
 
         {/* Big title */}
         <div className="mt-4">
@@ -171,9 +150,9 @@ const SectionChild3: React.FC = () => {
             className="js-title text-[#efe6d0] font-extrabold leading-[1.2] tracking-tight"
             style={{ fontSize: "clamp(3rem, 7vw, 8.5rem)" }}
           >
-            Nguyên nhân
+            Nền tảng tư tưởng và
             <br />
-            khách quan
+            giá trị nhân loại
           </h1>
 
           {/* barbed wire decorative */}
@@ -194,16 +173,16 @@ const SectionChild3: React.FC = () => {
         <div className="w-[80%] mt-10 js-caption">
           <div className="text-[#efe6d0] text-xl leading-8">
             <ul className="list-disc list-inside space-y-3 text-lg">
-              <li>Nền kinh tế sau chiến tranh kiệt quệ; sản xuất nhỏ, manh mún là phổ biến.</li>
-              <li>Hậu quả chiến tranh biên giới và bao vây, cấm vận từ Hoa Kỳ cùng các nước phương Tây làm suy yếu khả năng phục hồi.</li>
-              <li>Thiên tai liên tục (1979–1984) ảnh hưởng nặng nề đến sản xuất nông nghiệp, làm giảm sút nguồn lương thực và nguyên liệu.</li>
+              <li>Tư tưởng Mác-Lenin: Nền tảng tinh thần của XHCN</li>
+              <li>Bản sắc dân tộc: Phát huy giá trị văn hóa truyền thống</li>
+              <li>Giá trị nhân loại: Tiếp thu văn minh thế giới</li>
             </ul>
           </div >
         </div>
       </div>
 
       {/* RIGHT PANEL */}
-      <div className="relative w-[50%] bg-green-900/40 px-12 py-8 flex-col" ref={triggerRef}>
+      <div className="relative w-[50%] bg-[#c64b4b] px-12 py-8 flex-col" ref={triggerRef}>
 
         {/* Big title */}
         <div className="mt-4">
@@ -211,9 +190,7 @@ const SectionChild3: React.FC = () => {
             className="js-title text-[#efe6d0] font-extrabold leading-[1.2] tracking-tight"
             style={{ fontSize: "clamp(3rem, 7vw, 8.5rem)" }}
           >
-            Nguyên nhân
-            <br />
-            chủ quan
+            Giải quyết vấn đề xã hội
           </h1>
 
           {/* barbed wire decorative */}
@@ -233,16 +210,61 @@ const SectionChild3: React.FC = () => {
         {/* bottom caption */}
         <div className="w-[80%] mt-10 js-caption">
           <div className="text-[#efe6d0] text-xl leading-8">
-            <p className="mb-4">
-              Các sai lầm chủ yếu bao gồm
+            <p className="font-semibold mb-3">Nhà nước thực hiện từng bước sự phân hóa giữa các giai cấp, đảm bảo bình đẳng trong tiếp cận nguồn lực và cơ hội phát triển.
             </p>
 
-            <p className="font-semibold mb-3">Sai lầm về tư duy và bước đi nóng vội:</p>
+            <ul className="list-disc list-inside space-y-3 text-base">
+              <li>Bình đẳng xã hội: Cơ hội phát triển công bằng cho tất cả
+              </li>
+              <li>Tiếp cận nguồn lực: Phân phối công bằng tài nguyên
+              </li>
+              <li>Xã hội văn minh: Xây dựng xã hội dân chủ, tiến bộ
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative w-[50%] bg-green-900/40 px-12 py-8 flex-col">
+
+        {/* Big title */}
+        <div className="mt-4">
+          <h1
+            className="js-title text-[#efe6d0] font-extrabold leading-[1.2] tracking-tight"
+            style={{ fontSize: "clamp(3rem, 7vw, 8.5rem)" }}
+          >
+            Dân chủ XHCN ở Việt Nam
+          </h1>
+
+          {/* barbed wire decorative */}
+          <div className="mt-6">
+            <div className="flex items-center gap-2 text-[#c64b4b] js-barb">
+              {/* repeated tiny barbed-wire shapes */}
+              <svg width="220" height="18" viewBox="0 0 220 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 9H220" stroke="#c64b4b" strokeWidth="2" strokeLinecap="round" />
+                <g stroke="#c64b4b" strokeWidth="2" strokeLinecap="round">
+                  <path d="M20 9l6-4M20 9l6 4M52 9l6-4M52 9l6 4M84 9l6-4M84 9l6 4M116 9l6-4M116 9l6 4M148 9l6-4M148 9l6 4" />
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        {/* bottom caption */}
+        <div className="w-[80%] mt-10 js-caption">
+          <div className="text-[#efe6d0] text-xl leading-8">
+            <p className="font-semibold mb-3">Quyền làm chủ của nhân dân là nội dung căn bản, được thực hiện thông qua Nhà nước pháp quyền XHCN, gắn liền với phát huy dân chủ xã hội chủ nghĩa.
+            </p>
 
             <ul className="list-disc list-inside space-y-3 text-base">
-              <li>Ưu tiên phát triển công nghiệp nặng.</li>
-              <li>Đặt các chỉ tiêu kinh tế cao.</li>
-              <li>Chủ trương nóng vội (hoàn thành cải tạo XHCN cả nước trong thời gian ngắn 1976).</li>
+              <li>Quyền bầu cử: Nhân dân tham gia quyết định
+              </li>
+              <li>Tự Do Phát Biểu: Bày tỏ ý kiến tự do
+              </li>
+              <li>Tham Gia Quản Lý: Nhân dân quản lý nhà nước
+              </li>
+              <li>Bảo Vệ Quyền Lợi: Đảm bảo quyền con người</li>
+              <li>Pháp Quyền: Nhà nước tuân thủ pháp luật</li>
             </ul>
           </div>
         </div>

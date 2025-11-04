@@ -118,51 +118,6 @@ const SectionChild2: React.FC = () => {
       ref={sectionRef}
       className="relative min-w-[150vw] w-full min-h-screen flex bg-black"
     >
-      {isOpen &&
-        <ViewModal
-          isOpen={isOpen}
-          onClose={() => setIsOpen(false)}
-          title="Quiz Time!"
-        >
-          <div className="p-6 w-full">
-            <h2 className="text-2xl font-bold mb-4">Thất bại của cuộc cải cách &quot;giá - lương - tiền&quot; năm 1985 (biểu hiện qua sự kiện đổi tiền hỗn loạn) được xem là nguyên nhân trực tiếp và quyết định nhất thúc đẩy Đại hội VI (12/1986) phải thông qua chủ trương cốt lõi nào của Đường lối Đổi Mới?</h2>
-
-            <div className="space-y-3">
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("A")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                A. Chấm dứt cơ chế tập trung quan liêu bao cấp, chuyển sang phát triển kinh tế hàng hóa nhiều thành phần.
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("B")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                B. Phải đặt mục tiêu xây dựng nền quốc phòng toàn dân gắn liền với an ninh nhân dân.
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("C")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                C. Phát triển nông nghiệp là mặt trận hàng đầu và áp dụng Khoán 10 trong nông nghiệp.
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("D")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                D. Đẩy mạnh công tác xây dựng Đảng vững mạnh về chính trị, tư tưởng và tổ chức.
-              </button>
-            </div>
-          </div>
-        </ViewModal>
-      }
       <div className="relative w-[100vw] flex items-center bg-gradient-to-r from-green-900/40 to-green-900/40">
         <div
           ref={bgRef}
@@ -172,36 +127,13 @@ const SectionChild2: React.FC = () => {
           style={{ backgroundImage: "url('/images/section4.3.webp')", willChange: "transform" }}
         />
 
-        {isQuiz &&
-          <img
-            src="/images/circle.gif"
-            className="absolute top-24 right-24 z-[20] pointer-events-none"
-          />
-        }
-
-        {isQuiz &&
-          <div className="absolute w-[300px] h-[60px] top-[120px] right-[140px] z-[20]" onClick={() => setIsOpen(true)} />
-        }
-
         <div className="absolute z-[99] w-[92%] max-w-[1100px] text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
-          <div className="mb-2">
-            <div
-              ref={yearRef}
-              className="text-2xl font-bold tracking-wide opacity-95"
-              style={{ willChange: "transform" }}
-            >
-              ĐẠI HỘI VI (12/1986)
-            </div>
-          </div>
-
           <h1
             ref={titleRef}
             className="mt-4 font-extrabold leading-[1.2] text-[clamp(36px,8vw,110px)] tracking-[-0.08em] uppercase text-[#f2eadf] relative max-w-[1100px] drop-shadow-[0_6px_18px_rgba(0,0,0,0.7)]"
             style={{ willChange: "transform" }}
           >
-            KHỞI XƯỚNG ĐƯỜNG LỐI
-            <br />
-            ĐỔI MỚI TOÀN DIỆN
+            Chức năng đối nội
             <span
               className="block absolute left-1/2 -translate-x-1/2 bottom-[-18px] w-[86%] h-[36px] pointer-events-none"
               aria-hidden
@@ -225,9 +157,9 @@ const SectionChild2: React.FC = () => {
         <img src="/images/hand.gif" className="absolute top-12 right-20" />
         <div className="max-w-[40rem] px-8 py-12 text-[#f2eadf]">
           <ul className="list-disc list-inside space-y-4 text-2xl leading-relaxed">
-            <li className="font-semibold">Tự phê bình nghiêm túc: nhìn thẳng vào sự thật, chỉ rõ những sai lầm chủ quan, duy ý chí kéo dài (1975-1986).</li>
-            <li>Chấm dứt cơ chế bao cấp: xóa bỏ cơ chế tập trung quan liêu hành chính bao cấp.</li>
-            <li>Chuyển sang kinh tế hàng hóa nhiều thành phần: vận hành theo cơ chế thị trường có sự quản lý của Nhà nước.</li>
+            <li className="font-semibold">Củng cố chế độ chính trị, pháp luật, trật tự xã hội.</li>
+            <li>Phát triển kinh tế, giáo dục, y tế, văn hóa.</li>
+            <li>Bảo đảm quyền làm chủ và công bằng xã hội.</li>
           </ul>
         </div>
       </div>

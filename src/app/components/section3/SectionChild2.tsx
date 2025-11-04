@@ -108,7 +108,7 @@ const SectionChild3: React.FC = () => {
       {/* LEFT PANEL */}
       <div ref={showRef} />
       <div
-        ref={leftRef}
+        ref={triggerRef}
         className={cn("relative z-[20] w-[50vw] min-w-[50vw] px-12 py-8 flex flex-col bg-[#f1eada]", inView ? "" : "opacity-0")}
       >
         {/* Big title */}
@@ -117,7 +117,7 @@ const SectionChild3: React.FC = () => {
             className="js-title text-black font-extrabold leading-[1.2] tracking-tight"
             style={{ fontSize: "clamp(3rem, 7vw, 8.5rem)" }}
           >
-            Nguyên nhân chính
+            1.Nền tảng tư tưởng và giá trị nhân loại
             <br />
           </h1>
 
@@ -169,7 +169,7 @@ const SectionChild3: React.FC = () => {
       </div>
 
       {/* RIGHT PANEL */}
-      <div className="relative w-[100vw] min-w-[100vw] px-12 py-8 flex-col bg-[#e94b59]" ref={triggerRef}>
+      <div className="relative w-[100vw] min-w-[100vw] px-12 py-8 flex-col bg-[#e94b59]">
 
         {/* Big title */}
         <div className="mt-4">
@@ -213,60 +213,6 @@ const SectionChild3: React.FC = () => {
           </div>
         }
       </div>
-      {isOpen &&
-        <ViewModal
-          isOpen={isOpen}
-          onClose={() => setIsOpen(false)}
-          title="Quiz Time!"
-        >
-          <Image
-            src="/images/section3.2.webp"
-            alt="decorative"
-            width={300}
-            height={100}
-            style={{
-              margin: "0 auto"
-            }}
-          />
-          <div className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Đây là Hội nghị nào của Đảng Cộng sản Việt Nam?</h2>
-
-            <div className="space-y-3">
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("A")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                A. Hội nghị Trung ương 6 khóa IV
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("B")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                B. Hội nghị Trung ương 8 khóa V
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("C")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                C. Đại hội đại biểu toàn quốc lần thứ VI
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("D")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                D. Hội nghị Trung ương 5 khóa VII
-              </button>
-            </div>
-          </div>
-        </ViewModal>
-      }
     </section >
   )
 }

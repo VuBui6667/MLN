@@ -3,6 +3,8 @@ import SectionChild2 from './SectionChild2'
 import SectionChild1 from './SectionChild1'
 import SectionChild3 from './SectionChild3'
 import SectionChild4 from './SectionChild4'
+import SectionChild5 from './SectionChild5'
+import SectionChild7 from './SectionChild7'
 
 const Section2 = () => {
   return (
@@ -13,11 +15,15 @@ const Section2 = () => {
       {/* SECTION 2.2 */}
       <SectionChild2 />
 
+      <SectionChild5 />
+
       {/* SECTION 2.3 */}
       <SectionChild3 />
 
       {/* SECTION 2.4 */}
       <SectionChild4 />
+
+      <SectionChild7 />
     </section>
   )
 }

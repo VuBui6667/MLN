@@ -13,7 +13,7 @@ const Section3 = () => {
       <SectionChild3 />
 
       {/* SECTION 2.2 */}
-      <SectionChild2 />
+      {/* <SectionChild2 /> */}
 
     </section>
   )

@@ -57,15 +57,12 @@ const SectionChild4: React.FC = () => {
         {/* Big title */}
         <div className="mt-4">
           <h1
-            className="js-title text-white font-extrabold leading-[1.2] tracking-tight"
+            className="js-title text-red-500 font-extrabold leading-[1.2] tracking-tight"
             style={{ fontSize: "clamp(3rem, 7vw, 8.5rem)" }}
           >
-            Lý do lựa chọn cải cách
+            Vai trò của Đảng Cộng sản
             <br />
-            <span className={cn(isQuiz ? "text-red-500" : "text-amber-500")} onClick={() => {
-              if (!isQuiz) return
-              setIsOpen(true)
-            }}>Giá – Lương – Tiền</span>
+            và lý luận Mác – Lênin
           </h1>
 
           {/* barbed wire decorative */}
@@ -85,19 +82,12 @@ const SectionChild4: React.FC = () => {
         {/* bottom caption */}
         <div className="w-[80%] mt-10 js-caption">
           <div className="text-white text-xl leading-8">
-            <p className="mb-4">
-              “Giá – Lương – Tiền” là ba trụ cột quan trọng nhất của cơ chế bao cấp. Nếu không thay đổi được nó, sẽ không thể đổi mới phần còn lại của nền kinh tế.
-            </p>
-
-            <p className="font-semibold mb-3">Mục tiêu cải cách lúc bấy giờ gồm:</p>
-
             <ol className="list-decimal list-inside space-y-3 text-base ml-4">
-              <li>Xóa bỏ cơ chế bao cấp về giá và lương.</li>
-              <li>Tính đủ chi phí vào giá thành, thực hiện cơ chế một giá, không còn giá giả tạo.</li>
-              <li>Trả lương bằng tiền thật, có hàng hóa bảo đảm → khuyến khích người lao động sản xuất.</li>
-              <li>Chuyển ngân hàng sang hạch toán kinh tế, xóa bao cấp tín dụng.</li>
-              <li>Thừa nhận sản xuất hàng hóa và quy luật thị trường trong quản lý kinh tế quốc dân.</li>
+              <li>Sự ra đời của Đảng Cộng sản là bước ngoặt quyết định trong phong trào cách mạng vô sản.</li>
+              <li>Đảng đã trang bị cho giai cấp công nhân vũ khí lý luận là chủ nghĩa Mác – Lênin, giúp họ nhận thức rõ mục tiêu và con đường giành chính quyền</li>
             </ol>
+
+            <p className="mt-4 italic font-semibold">Cách mạng vô sản từ tự phát chuyển sang tự giác, dẫn đến thắng lợi và sự ra đời của nhà nước xã hội chủ nghĩa.</p>
           </div>
         </div>
       </div>

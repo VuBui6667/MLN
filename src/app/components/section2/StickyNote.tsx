@@ -8,9 +8,7 @@ const randomInt = (min: number, max: number) => {
 }
 
 const urls = [
-  "/images/note3.webp",
-  "/images/note2.webp",
-  "/images/note1.webp",
+  "/images/section2.3.webp",
 ]
 
 const StickyNote: React.FC = () => {

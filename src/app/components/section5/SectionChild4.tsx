@@ -144,7 +144,7 @@ const SectionChild3: React.FC = () => {
             className="js-title text-[#efe6d0] font-extrabold leading-[1.2] tracking-tight"
             style={{ fontSize: "clamp(3rem, 7vw, 8.5rem)" }}
           >
-            Giá Cả
+            Bản chất kinh tế
           </h1>
 
           {/* barbed wire decorative */}
@@ -166,20 +166,15 @@ const SectionChild3: React.FC = () => {
           <div className="text-[#efe6d0] text-xl leading-8">
             <div className="mb-4 inline-block font-light">
               <span className="inline-block font-bold mr-1">
-                Cách thức tiến hành thực tế:
+                Nền tảng kinh tế XHCN là chế độ công hữu về tư liệu sản xuất chủ yếu, loại bỏ quan hệ sản xuất bóc lột.
               </span>
-              <ul className="list-disc list-inside space-y-2 text-xl mt-2">
-                <li>Các Bộ, ngành và địa phương phải xây dựng lại bảng giá phù hợp với thực tế.</li>
-                <li>Tuy nhiên, do chưa có sự thống nhất về giá đầu vào – đầu ra, nên việc thực hiện thiếu đồng bộ, méo mó, không triệt để.</li>
-              </ul>
             </div>
             <div className="mb-4 inline-block font-light">
-              <span className="inline-block font-bold mr-1">
-                Sai lầm trọng yếu:
-              </span>
               <ul className="list-disc list-inside space-y-2 text-xl mt-2">
-                <li>Giá vẫn bị can thiệp hành chính, không phản ánh đúng chi phí thực tế.</li>
-                <li>Chính sách giá không theo tín hiệu thị trường, gây rối loạn cung – cầu, mất cân đối hàng hóa.</li>
+                <li>Sở hữu xã hội: Tư liệu sản xuất chủ yếu thuộc toàn xã hội</li>
+                <li>Không bóc lột: Phân phối lợi ích theo kết quả lao động</li>
+                <li>Phát triển hiệu quả: Lực lượng sản xuất hiện đại, quan hệ sản xuất tiên tiến
+                </li>
               </ul>
             </div>
           </div>
@@ -197,7 +192,7 @@ const SectionChild3: React.FC = () => {
             className="js-title text-[#efe6d0] font-extrabold leading-[1.2] tracking-tight"
             style={{ fontSize: "clamp(3rem, 7vw, 8.5rem)" }}
           >
-            Tiền Lương
+            Mục tiêu kinh tế XHCN
           </h1>
 
           {/* barbed wire decorative */}
@@ -219,74 +214,14 @@ const SectionChild3: React.FC = () => {
           <div className="text-[#efe6d0] text-xl leading-8">
             <div className="mb-4 inline-block font-light">
               <span className="inline-block font-bold mr-1">
-                Cách thức tiến hành thực tế:
+                Chăm lo lợi ích của đại đa số nhân dân lao động là mục tiêu hàng đầu của Nhà nước XHCN
               </span>
-              <ul className="list-disc list-inside space-y-2 text-xl mt-2">
-                <li>Mức lương danh nghĩa tăng lên 100% so với kế hoạch ban đầu.</li>
-                <li>Để đáp ứng nhu cầu chi trả, Nhà nước buộc phải in thêm một lượng lớn tiền, vượt quá khả năng cung ứng hàng hóa.</li>
-              </ul>
             </div>
             <div className="mb-4 inline-block font-light">
-              <span className="inline-block font-bold mr-1">
-                Sai lầm trọng yếu:
-              </span>
               <ul className="list-disc list-inside space-y-2 text-xl mt-2">
-                <li>In tiền để giải quyết lương và ngân sách mà không có hàng hóa đối ứng, gây ra lạm phát cao.</li>
-                <li>Chính sách “bù giá vào lương” mất tác dụng nhanh chóng, đời sống người dân không được cải thiện thực chất.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <img src="/images/arrow.gif" className="absolute w-20 h-auto left-[90vw] bottom-40 rotate-180" />
-
-      <div ref={triggerRef3} />
-      {/* PANEL 3 */}
-      <div ref={sectionRef3} className="relative w-[50%] bg-[#e94b59] px-12 py-8 flex-col">
-
-        {/* Big title */}
-        <div className="mt-4">
-          <h1
-            className="js-title text-[#efe6d0] font-extrabold leading-[1.2] tracking-tight"
-            style={{ fontSize: "clamp(3rem, 7vw, 8.5rem)" }}
-          >
-            Tiền Tệ
-          </h1>
-
-          {/* barbed wire decorative */}
-          <div className="mt-6">
-            <div className="flex items-center gap-2 text-[#c64b4b] js-barb">
-              {/* repeated tiny barbed-wire shapes */}
-              <svg width="220" height="18" viewBox="0 0 220 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 9H220" stroke="#fff" strokeWidth="2" strokeLinecap="round" />
-                <g stroke="#fff" strokeWidth="2" strokeLinecap="round">
-                  <path d="M20 9l6-4M20 9l6 4M52 9l6-4M52 9l6 4M84 9l6-4M84 9l6 4M116 9l6-4M116 9l6 4M148 9l6-4M148 9l6 4" />
-                </g>
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        {/* bottom caption */}
-        <div className="w-[80%] mt-10 js-caption">
-          <div className="text-[#efe6d0] text-xl leading-8">
-            <div className="mb-4 inline-block font-light">
-              <span className="inline-block font-bold mr-1">
-                Cách thức tiến hành thực tế:
-              </span>
-              <ul className="list-disc list-inside space-y-2 text-xl mt-2">
-                <li>Đổi tiền đột ngột vào ngày 14/9/1985, trong thời gian ngắn (gọi là “đổi tiền vội vàng”).</li>
-                <li>Quy định hạn mức đổi tiền tối đa cho mỗi gia đình chỉ từ 1.500 – 2.000 đồng tiền mới.</li>
-              </ul>
-            </div>
-            <div className="mb-4 inline-block font-light">
-              <span className="inline-block font-bold mr-1">
-                Sai lầm trọng yếu:
-              </span>
-              <ul className="list-disc list-inside space-y-2 text-xl mt-2">
-                <li>Việc quản lý hành chính quá cứng nhắc trong đổi tiền gây khủng hoảng niềm tin trong dân chúng.</li>
-                <li>Tiền mới nhanh chóng mất giá, lạm phát bùng nổ, niềm tin vào Nhà nước bị ảnh hưởng nghiêm trọng.</li>
+                <li>Lợi ích nhân dân: Ưu tiện lợi ích xã hội</li>
+                <li>Phát triển bền vững: Kinh tế vì con người</li>
+                <li>Công bằng xã hội: Giảm bất bình đẳng</li>
               </ul>
             </div>
           </div>

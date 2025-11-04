@@ -108,9 +108,7 @@ const SectionChild2: React.FC = () => {
 
   // images seeds for map + ref assignment
   const seeds = [
-    { src: '/images/section1.2.1.webp', alt: 'historic illustration 1' },
-    { src: '/images/section1.2.3.webp', alt: 'historic illustration 2' },
-    { src: '/images/section1.2.2.webp', alt: 'historic interior' },
+    { src: '/images/section2.2.webp', alt: 'historic illustration 1' },
   ]
 
   const [isLoading, setIsLoading] = useState(false);
@@ -155,48 +153,6 @@ const SectionChild2: React.FC = () => {
 
   return (
     <div className="min-w-[90vw] w-full bg-[#f1eada] h-full">
-      {isOpen &&
-        <ViewModal isOpen onClose={() => setIsOpen(false)} title="Quiz Time!">
-          <div className="p-6">
-            <h2 className="text-2xl font-bold mb-4">Trong giai đoạn trước năm 1985, hệ thống phân phối hàng hóa ở Việt Nam chủ yếu dựa trên hình thức nào?
-            </h2>
-
-            <div className="space-y-3">
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("A")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                A. Mua bán tự do theo thị trường
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("B")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                B. Nhập khẩu trực tiếp từ nước ngoài
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("C")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                C. Cấp phát bằng tem phiếu trong hệ thống bao cấp
-              </button>
-
-              <button
-                type="button"
-                onClick={() => handleSubmitQuiz("D")}
-                className="w-full text-left px-4 py-3 bg-white rounded shadow hover:bg-gray-100"
-              >
-                D. Sử dụng hợp đồng thương mại quốc tế
-              </button>
-            </div>
-          </div>
-        </ViewModal>
-      }
       <div
         ref={containerRef}
         className={`relative h-full flex flex-col items-center justify-center text-black p-8 ${inView ? '' : 'opacity-0'}`}
@@ -206,9 +162,9 @@ const SectionChild2: React.FC = () => {
           ref={h1Ref}
           className="text-[3.5rem] md:text-[6rem] lg:text-[6rem] font-extrabold leading-none text-center -tracking-tighter select-none"
         >
-          Bối cảnh kinh tế - xã hội
+          Nguồn gốc và
           <br />
-          trước cải cách
+          khát vọng hình thành
         </h1>
 
         {/* decorative scribble top-right */}
@@ -227,7 +183,7 @@ const SectionChild2: React.FC = () => {
             <figure
               key={s.src}
               ref={(el: any) => (imagesRef.current[i] = el)}
-              className="w-36 md:w-56 bg-white/90 border border-black/10 shadow-sm rounded-xl"
+              className="w-36 md:w-80 bg-white/90 border border-black/10 shadow-sm rounded-xl"
             >
               <img src={s.src} alt={s.alt} className="w-full h-auto object-cover rounded-xl" />
             </figure>
@@ -240,9 +196,7 @@ const SectionChild2: React.FC = () => {
           ref={h2Ref}
           className="mt-6 text-[2.5rem] font-extrabold leading-[1.4] text-center select-none"
         >
-          Sau năm 1975, Việt Nam áp dụng mô hình kinh tế kế hoạch hóa tập trung bao cấp, trong đó Nhà nước kiểm soát giá cả, tiền lương và phân phối hàng hóa. Hàng tiêu dùng được cấp phát bằng
-          <span className={cn(isQuiz ? "text-red-500" : "text-inherit")} onClick={() => setIsOpen(true)}> tem phiếu</span>
-          , tiền lương không phản ánh giá trị thực do giá cả thấp và khan hiếm hàng hóa.
+          Từ khát vọng về tự do, công bằng và bình đẳng, con người hình thành tư tưởng về một nhà nước của dân, do dân, vì dân – tiền đề cho nhà nước xã hội chủ nghĩa.
         </h2>
 
         {/* small red accent near bottom text */}

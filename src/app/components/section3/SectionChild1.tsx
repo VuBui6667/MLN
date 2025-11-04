@@ -95,24 +95,17 @@ const SectionChild1 = () => {
           ref={topRef}
           className="absolute top-8 left-0 right-0 text-center text-xs md:text-lg uppercase tracking-widest font-bold transform -translate-y-8 opacity-0"
         >
-          PERIOD 3
         </div>
 
         <div className="flex flex-col gap-1 items-center justify-center leading-none select-none">
           <div
             ref={line1Ref}
-            className="text-[8rem] md:text-[14rem] lg:text-[9rem] font-extrabold leading-none transform translate-y-24 scale-95 opacity-0"
+            className="text-[8rem] md:text-[14rem] lg:text-[9rem] font-extrabold leading-none transform translate-y-24 scale-95 opacity-0 text-center"
             aria-hidden
           >
-            Hậu Quả và
-          </div>
-
-          <div
-            ref={line2Ref}
-            className="text-[8rem] md:text-[14rem] lg:text-[9rem] font-extrabold leading-none transform translate-y-24 scale-95 opacity-0"
-            aria-hidden
-          >
-            Nguyên Nhân Thất Bại
+            Bản Chất
+            <br />
+            Văn Hóa - Xã Hội
           </div>
         </div>
       </div>

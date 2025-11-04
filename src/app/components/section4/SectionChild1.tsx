@@ -89,13 +89,13 @@ const SectionChild1 = () => {
     }
   }, [])
   return (
-    <div className="min-w-[100vw] w-full bg-[#e94b59] border-t border-black">
+    <div className="min-w-[120vw] w-full bg-[#e94b59] border-t border-black">
       <div className="relative h-screen flex flex-col items-center justify-center text-black">
         <div
           ref={topRef}
           className="absolute top-8 left-0 right-0 text-center text-xs md:text-lg uppercase tracking-widest font-bold transform -translate-y-8 opacity-0"
         >
-          PERIOD 4
+          PERIOD 3
         </div>
 
         <div className="flex flex-col gap-8 items-center justify-center leading-[1.2] select-none">
@@ -104,7 +104,7 @@ const SectionChild1 = () => {
             className="text-[8rem] md:text-[14rem] lg:text-[9rem] font-extrabold leading-none transform translate-y-24 scale-95 opacity-0"
             aria-hidden
           >
-            Bài Học và
+            CHỨC NĂNG CỦA NHÀ NƯỚC
           </div>
 
           <div
@@ -112,7 +112,7 @@ const SectionChild1 = () => {
             className="text-[8rem] md:text-[14rem] lg:text-[9rem] font-extrabold leading-none transform translate-y-24 scale-95 opacity-0"
             aria-hidden
           >
-            Ý Nghĩa Lịch Sử
+            XÃ HỘI CHỦ NGHĨA
           </div>
         </div>
       </div>

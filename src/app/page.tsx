@@ -9,6 +9,10 @@ import Section5 from "./components/section5/Section5";
 import Section2 from "./components/section2/Section2";
 import Section3 from "./components/section3/Section2";
 import Section4 from "./components/section4/Section4";
+import Section7 from "./components/section7/Section5";
+import Section6 from "./components/section6/Section5";
+import Section8 from "./components/section8/Section2";
+import Section9 from "./components/section9/Section4";
 
 // const Section2 = dynamic(() => import('./components/section2/Section2'));
 // const Section3 = dynamic(() => import('./components/section3/Section2'));
@@ -102,6 +106,33 @@ export default function ScrollHorizontalPage() {
           </div>
         </div>
 
+        {/* HORIZONTAL GROUP 3 — behaves the same (scroll horizontal inside this group) */}
+        <div className="horizontal-wrapper relative h-screen overflow-hidden">
+          <div className="horizontal-container flex h-screen">
+            <Section6 />
+          </div>
+        </div>
+
+        {/* HORIZONTAL GROUP 3 — behaves the same (scroll horizontal inside this group) */}
+        <div className="horizontal-wrapper relative h-screen overflow-hidden">
+          <div className="horizontal-container flex h-screen">
+            <Section8 />
+          </div>
+        </div>
+
+        {/* HORIZONTAL GROUP 3 — behaves the same (scroll horizontal inside this group) */}
+        <div className="horizontal-wrapper relative h-screen overflow-hidden">
+          <div className="horizontal-container flex h-screen">
+            <Section9 />
+          </div>
+        </div>
+
+        {/* HORIZONTAL GROUP 3 — behaves the same (scroll horizontal inside this group) */}
+        <div className="horizontal-wrapper relative h-screen overflow-hidden">
+          <div className="horizontal-container flex h-screen">
+            <Section7 />
+          </div>
+        </div>
 
 
         {/* FINAL SECTION — vertical */}
@@ -137,7 +168,7 @@ export default function ScrollHorizontalPage() {
                 </button>
               </div>
             </div>
-            <p className="mt-6 text-lg opacity-90">— Trân trọng, VNR202 • Group 5 —</p>
+            <p className="mt-6 text-lg opacity-90">— Trân trọng, MLN131 • Group 2 —</p>
           </div>
         </section>
       </div>

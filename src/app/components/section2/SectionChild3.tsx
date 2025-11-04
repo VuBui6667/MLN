@@ -56,9 +56,9 @@ const SectionChild3: React.FC = () => {
             className="js-title text-[#efe6d0] font-extrabold leading-[1.2] tracking-tight"
             style={{ fontSize: "clamp(3rem, 7vw, 8.5rem)" }}
           >
-            Áp Lực Đổi Mới
+            Điều kiện lịch sử
             <br />
-            Cơ Chế
+            dẫn đến sự ra đời
           </h1>
 
           {/* barbed wire decorative */}
@@ -79,18 +79,19 @@ const SectionChild3: React.FC = () => {
         <div className="w-[80%] mt-10 js-caption">
           <div className="text-[#efe6d0] text-xl leading-8">
             <p className="mb-4">
-              Sau khi thống nhất đất nước năm 1975, Việt Nam lựa chọn xây dựng nền kinh tế theo mô hình kế hoạch hóa tập trung bao cấp.
+              Khi chủ nghĩa tư bản phát triển, nó tạo ra mâu thuẫn gay gắt giữa:
             </p>
 
             <p className="font-semibold mb-3">Trong mô hình này:</p>
 
             <ul className="list-disc list-inside space-y-3 text-base">
-              <li>Nhà nước kiểm soát toàn bộ giá cả, tiền lương, phân phối hàng hóa.</li>
-              <li>Hầu hết hàng hóa tiêu dùng thiết yếu được cấp phát bằng tem phiếu chứ không mua bán theo giá thị trường.</li>
-              <li>Người lao động nhận lương bằng tiền, nhưng giá cả thấp giả tạo; thiếu hàng hóa nên tiền không phản ánh đúng giá trị thực.</li>
+              <li>Quan hệ sản xuất tư nhân dựa trên sở hữu của giai cấp tư sản,</li>
+              <li>Và tính xã hội hóa cao của lực lượng sản xuất – do người lao động tạo ra.</li>
+              <li>Mâu thuẫn này dẫn tới khủng hoảng kinh tế, bất công xã hội, và đấu tranh giai cấp giữa công nhân và tư sản ngày càng gay gắt.</li>
+
             </ul>
 
-            <p className="mt-4 italic font-semibold">Và bước đột phá được chọn chính là: giá – lương – tiền.</p>
+            <p className="mt-4 italic font-semibold">{"Giai cấp vô sản đã trưởng thành, trở thành lực lượng cách mạng có khả năng lãnh đạo xã hội."}</p>
           </div>
         </div>
       </div>

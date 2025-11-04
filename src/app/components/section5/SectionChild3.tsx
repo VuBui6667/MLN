@@ -75,8 +75,8 @@ const SectionChild2: React.FC = () => {
           ref={bgRef}
           role="presentation"
           aria-hidden={true}
-          className="absolute inset-0 bg-cover bg-center z-[10] filter brightness-75 contrast-75 pointer-events-none"
-          style={{ backgroundImage: "url('/images/section5.3.webp')", willChange: "transform" }}
+          className="absolute inset-0 bg-cover bg-center z-[10] filter brightness-75 contrast-75 pointer-events-none sepia"
+          style={{ backgroundImage: "url('/images/section5.2.webp')", willChange: "transform" }}
         />
 
         <div className="absolute z-[99] w-[92%] max-w-[1100px] text-center left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
@@ -85,9 +85,9 @@ const SectionChild2: React.FC = () => {
             className="mt-4 font-extrabold leading-[1.2] text-[clamp(36px,8vw,52px)] tracking-[-0.08em] uppercase text-[#f2eadf] relative max-w-[1100px] drop-shadow-[0_6px_18px_rgba(0,0,0,0.7)]"
             style={{ willChange: "transform" }}
           >
-            Chủ trương mang tính “hành chính – mệnh lệnh”
+            Đặc Trưng Nhà Nước
             <br />
-            thiếu chuẩn bị cơ sở vật chất và tâm lý xã hội.
+            Pháp Quyền XHCN Việt Nam
             <span
               className="block absolute left-1/2 -translate-x-1/2 bottom-[-18px] w-[86%] h-[36px] pointer-events-none"
               aria-hidden
@@ -105,6 +105,15 @@ const SectionChild2: React.FC = () => {
               </svg>
             </span>
           </h1>
+          <div className="text-3xl mt-8 text-[#f2eadf] max-w-3xl mx-auto leading-7">
+            Kết hợp bản chất giai cấp công nhân với tính dân tộc rộng rãi. Quyền lực nhà nước thống nhất với sự phân công, phối hợp giữa các cơ quan lập pháp, hành pháp, tư pháp.
+          </div>
+          <div className="text-2xl flex flex-col justify-center mt-8 text-[#f2eadf] max-w-3xl mx-auto leading-7 gap-4 bg-red-500/30 p-6 w-fit rounded-xl">
+            <p>Thống Nhất: Quyền lực nhà nước tập trung</p>
+            <p>Phối hợp: Các cơ quan hoạt động hiệp thương</p>
+            <p>Dân tộc: Gắn bó chặt chẽ với nhân dân</p>
+            <p>Kiểm soát: Cân bằng quyền lực hậu quả</p>
+          </div>
         </div>
       </div>
     </section>

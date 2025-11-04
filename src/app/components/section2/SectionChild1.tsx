@@ -104,7 +104,7 @@ const SectionChild1 = () => {
             className="text-[8rem] md:text-[14rem] lg:text-[9rem] font-extrabold leading-none transform translate-y-24 scale-95 opacity-0"
             aria-hidden
           >
-            Bối Cảnh Và Lý Do
+            Sự Ra Đời Của Nhà
           </div>
 
           <div
@@ -112,7 +112,7 @@ const SectionChild1 = () => {
             className="text-[8rem] md:text-[14rem] lg:text-[9rem] font-extrabold leading-none transform translate-y-24 scale-95 opacity-0"
             aria-hidden
           >
-            Tiến Hành Cải Cách
+            Nước Xã Hội Chủ Nghĩa
           </div>
         </div>
       </div>
